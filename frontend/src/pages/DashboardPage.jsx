@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useAuth } from '../context/AuthContext'
 import api from '../utils/api'
-import { Package, Users, Boxes, Tag, AlertTriangle, DollarSign, RefreshCw } from 'lucide-react'
+import { Package, Users, Boxes, Tag, AlertTriangle, DollarSign, RefreshCw, IndianRupeeIcon } from 'lucide-react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 
 const COLORS = ['#06b6d4','#3b82f6','#8b5cf6','#10b981','#f59e0b','#f43f5e']
@@ -56,7 +56,7 @@ export default function DashboardPage() {
     { icon: Tag,           label: 'Categories',      value: stats?.total_categories,      colorClass: 'text-violet-400',  borderClass: 'border-violet-500/15' },
     { icon: Users,         label: 'Active Users',    value: stats?.total_users,           colorClass: 'text-emerald-400', borderClass: 'border-emerald-500/15' },
     { icon: AlertTriangle, label: 'Low Stock',       value: stats?.low_stock_items,       colorClass: 'text-amber-400',   borderClass: 'border-amber-500/15' },
-    { icon: DollarSign,    label: 'Stock Value',     value: `₹${(stats?.total_stock_value||0).toLocaleString()}`, colorClass: 'text-rose-400', borderClass: 'border-rose-500/15' },
+    { icon: IndianRupeeIcon, label: 'Stock Value',     value: `₹${(stats?.total_stock_value||0).toLocaleString()}`, colorClass: 'text-rose-400', borderClass: 'border-rose-500/15' },
   ]
 
   if (loading) return (

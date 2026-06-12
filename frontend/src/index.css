@@ -60,3 +60,59 @@ body {
     radial-gradient(at 80% 20%, rgba(139,92,246,0.05) 0px, transparent 50%),
     radial-gradient(at 50% 80%, rgba(59,130,246,0.05) 0px, transparent 50%);
 }
+/* ── Light Theme ── */
+.light body {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.light .glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.light .input-field {
+  background: rgba(248, 250, 252, 0.9);
+  border-color: rgba(0,0,0,0.1);
+  color: #0f172a;
+}
+
+.light .input-field::placeholder {
+  color: #94a3b8;
+}
+
+.light .nav-link {
+  color: #475569;
+}
+
+.light .nav-link:hover {
+  background: rgba(6,182,212,0.08);
+  color: #0f172a;
+}
+
+.light .nav-link-active {
+  background: rgba(6,182,212,0.12);
+  color: #0891b2;
+  border-color: rgba(6,182,212,0.3);
+}
+
+.light .table-row:hover {
+  background: rgba(0,0,0,0.02);
+}
+
+.light aside {
+  background: #ffffff !important;
+  border-right-color: rgba(0,0,0,0.08) !important;
+}
+
+.light .btn-secondary {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  color: #374151;
+}
+
+/* Smooth transition for everything */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
+}
