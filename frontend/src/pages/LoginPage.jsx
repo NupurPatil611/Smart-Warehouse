@@ -184,11 +184,16 @@ export default function LoginPage() {
               </div>
             </form>
 
-            {/* Demo hint */}
+           {/* Demo hint */}
             <div className="mt-6 pt-5 border-t border-white/5">
               <p className="text-xs text-slate-500 mb-2 font-medium">First time? Register a Super Admin:</p>
               <div className="p-3 rounded-xl bg-slate-900/60 border border-white/5 text-xs text-slate-400 space-y-1">
-                <p>POST <span className="text-cyan-400 font-mono">http://localhost:8000/api/auth/register</span></p>
+                <p>
+                  POST{' '}
+                  <span className="text-cyan-400 font-mono">
+                    {`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/auth/register`}
+                  </span>
+                </p>
                 <p className="text-slate-600">Send: name, email, password</p>
               </div>
             </div>
